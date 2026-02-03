@@ -1,0 +1,293 @@
+# This is an example. Modify values as needed.
+
+# Project name
+project_name: storefront
+
+# Available architecture options:
+#   - clean_architecture (default)
+#   - mvc_architecture
+#   - mvvm_architecture
+architecture: clean_architecture
+
+# Available feature management strategies:
+#   - inLib (default): all features are placed in the `lib` folder
+#   - independantModules: each feature has its own Flutter modules for domain and data layers. The presentation layer remains in the main `lib` folder.
+#
+# Note: The "independantModules" option is only available for `clean_architecture`.
+features_strategy: inLib
+
+# List of features:
+features:
+  - cart:
+      name: cart # Override feature name
+      
+      # Feature description
+      description: Manage user's cart
+
+      usecases:
+        - addProductToCart: # Use case name
+            use_case_type: Future # Return type (Future or Stream)
+            description: Add user's product to cart
+            params: # List of parameters
+              id: String,
+              createdAt: DateTime,
+              sellerId: String,
+              label: String,
+              description: String,
+              price: double,
+              currency: String,
+              category: string,
+              subCategory: String,
+              images: List<String>,
+              isAvailable: bool,
+              isFeatured: bool,
+              isPopular: bool,
+              isOnSale: bool,
+              isOnDiscount: bool,
+              isOnNew: bool,
+              isOnBestSeller: bool,
+              isOnTopRated: bool,
+              isOnTrending: bool,
+              likes: List<String>,
+              views: List<String>,
+              shares: int,
+              isVerified: bool,
+              isApproved: bool,
+              isSoldOut: bool,
+              stock: int,
+              discountPercentage: double,
+              discountAmount: double,
+              discountStartDate: DateTime,
+              discountEndDate: DateTime,
+              availableColors: List<String>,
+              availableSizes: List<String>,
+              shopId: String,
+              lastUpdatedAt: int,
+              hasBeenIndexed: bool,
+
+        - getAllCartProducts:
+            use_case_type: Future
+            description: Get all user's cart products
+            params:
+              id: String,
+              createdAt: DateTime,
+              sellerId: String,
+              label: String,
+              description: String,
+              price: double,
+              currency: String,
+              category: string,
+              subCategory: String,
+              images: List<String>,
+              isAvailable: bool,
+              isFeatured: bool,
+              isPopular: bool,
+              isOnSale: bool,
+              isOnDiscount: bool,
+              isOnNew: bool,
+              isOnBestSeller: bool,
+              isOnTopRated: bool,
+              isOnTrending: bool,
+              likes: List<String>,
+              views: List<String>,
+              shares: int,
+              isVerified: bool,
+              isApproved: bool,
+              isSoldOut: bool,
+              stock: int,
+              discountPercentage: double,
+              discountAmount: double,
+              discountStartDate: DateTime,
+              discountEndDate: DateTime,
+              availableColors: List<String>,
+              availableSizes: List<String>,
+              shopId: String,
+              lastUpdatedAt: int,
+              hasBeenIndexed: bool,
+
+        - removeProductFromCart:
+            use_case_type: Future
+            description: Get all user's cart products
+            params:
+              id: String,
+              createdAt: DateTime,
+              sellerId: String,
+              label: String,
+              description: String,
+              price: double,
+              currency: String,
+              category: string,
+              subCategory: String,
+              images: List<String>,
+              isAvailable: bool,
+              isFeatured: bool,
+              isPopular: bool,
+              isOnSale: bool,
+              isOnDiscount: bool,
+              isOnNew: bool,
+              isOnBestSeller: bool,
+              isOnTopRated: bool,
+              isOnTrending: bool,
+              likes: List<String>,
+              views: List<String>,
+              shares: int,
+              isVerified: bool,
+              isApproved: bool,
+              isSoldOut: bool,
+              stock: int,
+              discountPercentage: double,
+              discountAmount: double,
+              discountStartDate: DateTime,
+              discountEndDate: DateTime,
+              availableColors: List<String>,
+              availableSizes: List<String>,
+              shopId: String,
+              lastUpdatedAt: int,
+              hasBeenIndexed: bool,
+        
+
+  - products: # Feature name (snake_case format)
+      
+      name: products # Override feature name
+      
+      # Feature description
+      description: Display merchants products
+      
+      # List of entity attributes (optional)
+      # If you don’t have attributes, you can skip this section.
+      entity_attributes:
+        id: String,
+        createdAt: DateTime,
+        sellerId: String,
+        label: String,
+        description: String,
+        price: double,
+        currency: String,
+        category: string,
+        subCategory: String,
+        images: List<String>,
+        isAvailable: bool,
+        isFeatured: bool,
+        isPopular: bool,
+        isOnSale: bool,
+        isOnDiscount: bool,
+        isOnNew: bool,
+        isOnBestSeller: bool,
+        isOnTopRated: bool,
+        isOnTrending: bool,
+        likes: List<String>,
+        views: List<String>,
+        shares: int,
+        isVerified: bool,
+        isApproved: bool,
+        isSoldOut: bool,
+        stock: int,
+        discountPercentage: double,
+        discountAmount: double,
+        discountStartDate: DateTime,
+        discountEndDate: DateTime,
+        availableColors: List<String>,
+        availableSizes: List<String>,
+        shopId: String,
+        lastUpdatedAt: int,
+        hasBeenIndexed: bool,
+      
+      # List of use cases
+      usecases:
+        - getProducts: # Use case name
+            use_case_type: Future # Return type (Future or Stream)
+            description: Get all merchant specific products
+            params: # List of parameters
+              id: String,
+              createdAt: DateTime,
+              sellerId: String,
+              label: String,
+              description: String,
+              price: double,
+              currency: String,
+              category: string,
+              subCategory: String,
+              images: List<String>,
+              isAvailable: bool,
+              isFeatured: bool,
+              isPopular: bool,
+              isOnSale: bool,
+              isOnDiscount: bool,
+              isOnNew: bool,
+              isOnBestSeller: bool,
+              isOnTopRated: bool,
+              isOnTrending: bool,
+              likes: List<String>,
+              views: List<String>,
+              shares: int,
+              isVerified: bool,
+              isApproved: bool,
+              isSoldOut: bool,
+              stock: int,
+              discountPercentage: double,
+              discountAmount: double,
+              discountStartDate: DateTime,
+              discountEndDate: DateTime,
+              availableColors: List<String>,
+              availableSizes: List<String>,
+              shopId: String,
+              lastUpdatedAt: int,
+              hasBeenIndexed: bool,
+        - getProductById:
+            use_case_type: Future
+            description: View a specific product
+            params:
+              id: String,
+              createdAt: DateTime,
+              sellerId: String,
+              label: String,
+              description: String,
+              price: double,
+              currency: String,
+              category: string,
+              subCategory: String,
+              images: List<String>,
+              isAvailable: bool,
+              isFeatured: bool,
+              isPopular: bool,
+              isOnSale: bool,
+              isOnDiscount: bool,
+              isOnNew: bool,
+              isOnBestSeller: bool,
+              isOnTopRated: bool,
+              isOnTrending: bool,
+              likes: List<String>,
+              views: List<String>,
+              shares: int,
+              isVerified: bool,
+              isApproved: bool,
+              isSoldOut: bool,
+              stock: int,
+              discountPercentage: double,
+              discountAmount: double,
+              discountStartDate: DateTime,
+              discountEndDate: DateTime,
+              availableColors: List<String>,
+              availableSizes: List<String>,
+              shopId: String,
+              lastUpdatedAt: int,
+              hasBeenIndexed: bool,
+
+
+# State management
+# Default is GetX
+# Currently available options: none, getx
+# Note: Only "none" and "getx" are available at the moment.
+state_management: none
+
+# List of environments:
+envs:
+  - development
+  - staging
+  - production
+
+# List of environment variables
+# Do not include sensitive data (only variable names)
+env_variables:
+  - ENV1
+  - ENV2

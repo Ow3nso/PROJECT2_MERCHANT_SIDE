@@ -1,0 +1,139 @@
+name: APP CI
+on:
+  push:
+    branches:
+      - main
+      - dev
+  merge_group:
+    branches:
+      - main
+      - dev
+  # pull_request:
+  #   branches:
+  #     - master
+  workflow_dispatch:
+
+jobs:
+  flutter_test:
+   name: Init Flutter and dev dpp
+   runs-on: ubuntu-latest
+   steps:
+    - name: Set up SSH
+      env:
+        PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$PRIVATE_KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+       distribution: 'zulu'
+       java-version: "12.x"
+    - name: Install  Dart
+      uses: dart-lang/setup-dart@v1
+      with: 
+        sdk: stable
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v1
+      with: 
+       channel: "stable"
+      #  version: "latest"
+    - name: Configure git credentials
+      run: |
+        git config --global url."https://x-access-token:${{ secrets.GH_ACCESS_TOKEN }}@github.com/".insteadOf "https://github.com/"
+    - run: flutter --version
+    - run: flutter pub get
+      
+  version: 
+    name: Create version number
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9.7
+        with:
+          versionSpec: "5.x"
+      - name: Create version.txt with nuGetVersion
+        run: echo ${{ steps.gitversion.outputs.nuGetVersion }} > version.txt
+
+      - name: Upload version.txt
+        uses: actions/upload-artifact@v2
+        with:
+          name: gitversion
+          path: version.txt
+  
+  build:
+   name: Create Android Build
+   needs: [flutter_test, version]
+   runs-on: ubuntu-latest
+   steps:
+     - name: Set up SSH
+       env:
+        PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+       run: |
+          mkdir -p ~/.ssh
+          echo "$PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+     - uses: actions/checkout@v2
+     - name: Install  Dart
+       uses: dart-lang/setup-dart@v1
+     - name: Get version.txt
+       uses: actions/download-artifact@v2
+       with: 
+         name: gitversion
+     - name: Create new file without newline char from version.txt
+       run: tr -d '\n' < version.txt > version1.txt
+     - name: Read version
+       id: version
+       uses: juliangruber/read-file-action@v1
+       with:
+         path: version1.txt
+     - name: Update version in YAML
+       run: sed -i 's/99.99.99+99/${{ steps.version.outputs.content }}+${{ github.run_number }}/g' pubspec.yaml
+     - name: Download Android keystore
+       id: android_keystore
+       uses: timheuer/base64-to-file@v1.0.3
+       with:
+         fileName: upload-keystore.jks
+         encodedString: ${{ secrets.KEYSTORE_BASE64 }}
+     - name: Create key.properties
+       run: |
+         echo "storeFile=${{ steps.android_keystore.outputs.filePath }}" > android/key.properties
+         echo "storePassword=${{ secrets.STORE_PASSWORD }}" >> android/key.properties
+         echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+         echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
+     - uses: actions/setup-java@v2
+       with:
+        distribution: 'zulu'
+        java-version: "12.x"
+        cache: gradle
+     - name: Setup Android SDK
+       uses: android-actions/setup-android@v2
+
+     - uses: subosito/flutter-action@v2
+       with: 
+         channel: "stable"
+         cache: true
+     - name: Install Firebase CLI
+       run: |
+        curl -sL https://firebase.tools | bash
+     - name: Clean cache
+       run: flutter clean
+     - name: Get dependencies
+       run: flutter pub get
+     - name: Start Android Release Dev APK
+       run: flutter build apk  --flavor dev
+       # disable this for now
+    #  - name: Start Android Release Bundle
+    #    run: flutter build appbundle --flavor prod
+     - name: Deploy to Firebase App Distribution Dev
+       run: |
+        firebase appdistribution:distribute build/app/outputs/flutter-apk/app-dev-release.apk \
+          --app 1:257334306927:android:8eff02c269461da7cb459a \
+          --token ${{ secrets.FIREBASE_TOKEN }} \
+          --groups luhku-internal \
+          --release-notes "New release -> Products fetch genesis, features and bug fixes"

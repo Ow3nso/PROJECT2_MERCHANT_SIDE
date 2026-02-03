@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+       
+        {
+        "label": "firebase_emulator",
+        
+        "isBackground": true,
+        "command": "firebase emulators:start --only firestore --import ./emulator", 
+        "type": "shell",
+        "problemMatcher":{
+            "owner": "custom",
+            "pattern":[
+                {
+                    "regexp": "An unexpected error has occurred",
+                    "file": 1,
+                    "location": 2,
+                    "message": 3
+                }
+            ],
+            "background": {
+                "activeOnStart": false,
+                "beginsPattern": "Starting emulators: firestore",
+                "endsPattern": "It is now safe to connect your app",
+            }
+        }
+    }]
+}

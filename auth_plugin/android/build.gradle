@@ -1,0 +1,47 @@
+group 'com.lukhu.mobile.plugin.auth.auth_plugin'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.9.25' // ✅ Upgrade Kotlin to match Flutter’s minimum (>=1.8.10)
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.6.1' // ✅ Match your main project
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace "com.lukhu.mobile.plugin.auth.auth_plugin" // ✅ Added namespace
+    compileSdkVersion 34 // ✅ Match main app
+
+    defaultConfig {
+        minSdkVersion 21 // ✅ Use modern minimum
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}

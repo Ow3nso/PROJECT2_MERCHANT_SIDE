@@ -1,0 +1,318 @@
+{
+  "project_info": {
+    "project_number": "257334306927",
+    "project_id": "lukhu-dev",
+    "storage_bucket": "lukhu-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257334306927:android:7ea0cd44aca3cf3ecb459a",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257334306927-9bk78apgvhvej0so83629o2neklkhrsg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app",
+            "certificate_hash": "a39604972d596ccbf36848f6efeed1c2614fddc2"
+          }
+        },
+        {
+          "client_id": "257334306927-rbup13o5vpmr3cfnko99qk89no62canh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr-N51X3rR1IcBFUUXgvKWTS0zIzRviI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257334306927-pppldblmlf320jrdjbk6rr69abanfg7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257334306927-31u90ahei4j44h7e4moru087575m8l9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257334306927:android:65681be4739a73a6cb459a",
+        "android_client_info": {
+          "package_name": "com.example.dukastax_lukhu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257334306927-30iu58povruhdbp41c59e70g8flihbba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dukastax_lukhu",
+            "certificate_hash": "a39604972d596ccbf36848f6efeed1c2614fddc2"
+          }
+        },
+        {
+          "client_id": "257334306927-rbup13o5vpmr3cfnko99qk89no62canh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr-N51X3rR1IcBFUUXgvKWTS0zIzRviI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257334306927-pppldblmlf320jrdjbk6rr69abanfg7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257334306927-31u90ahei4j44h7e4moru087575m8l9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257334306927:android:af6dcee27d3bbefacb459a",
+        "android_client_info": {
+          "package_name": "com.example.example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257334306927-sq23k562uqkvd1ocv6autas4d08a1at3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.example",
+            "certificate_hash": "a39604972d596ccbf36848f6efeed1c2614fddc2"
+          }
+        },
+        {
+          "client_id": "257334306927-rbup13o5vpmr3cfnko99qk89no62canh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr-N51X3rR1IcBFUUXgvKWTS0zIzRviI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257334306927-pppldblmlf320jrdjbk6rr69abanfg7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257334306927-31u90ahei4j44h7e4moru087575m8l9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257334306927:android:22ac5fcab7499021cb459a",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257334306927-krojjtphr6ngpgv5h4ms14d7dkon93n5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "a39604972d596ccbf36848f6efeed1c2614fddc2"
+          }
+        },
+        {
+          "client_id": "257334306927-rbup13o5vpmr3cfnko99qk89no62canh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr-N51X3rR1IcBFUUXgvKWTS0zIzRviI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257334306927-pppldblmlf320jrdjbk6rr69abanfg7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257334306927-31u90ahei4j44h7e4moru087575m8l9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257334306927:android:87bfba7f7137a374cb459a",
+        "android_client_info": {
+          "package_name": "com.fashion.lukhu.dukastax"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257334306927-ff2ftipacdk2rqhkn2it9m7pmgugh77k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fashion.lukhu.dukastax",
+            "certificate_hash": "a39604972d596ccbf36848f6efeed1c2614fddc2"
+          }
+        },
+        {
+          "client_id": "257334306927-rbup13o5vpmr3cfnko99qk89no62canh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr-N51X3rR1IcBFUUXgvKWTS0zIzRviI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257334306927-pppldblmlf320jrdjbk6rr69abanfg7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257334306927-31u90ahei4j44h7e4moru087575m8l9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257334306927:android:7e7c050e2be032a8cb459a",
+        "android_client_info": {
+          "package_name": "com.lukhu.mobile.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257334306927-vb5m3rqphestqau448k5mutpfof4qdcs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lukhu.mobile.app",
+            "certificate_hash": "a39604972d596ccbf36848f6efeed1c2614fddc2"
+          }
+        },
+        {
+          "client_id": "257334306927-rbup13o5vpmr3cfnko99qk89no62canh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr-N51X3rR1IcBFUUXgvKWTS0zIzRviI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257334306927-pppldblmlf320jrdjbk6rr69abanfg7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257334306927-31u90ahei4j44h7e4moru087575m8l9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257334306927:android:8eff02c269461da7cb459a",
+        "android_client_info": {
+          "package_name": "com.lukhu.mobile.app.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257334306927-2f7rtbsh7rou7kc0hsfptkp6081anjaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lukhu.mobile.app.dev",
+            "certificate_hash": "4b1333e204e6fcb3f9158b0ba9a8fc0b47ee6680"
+          }
+        },
+        {
+          "client_id": "257334306927-rbup13o5vpmr3cfnko99qk89no62canh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPr-N51X3rR1IcBFUUXgvKWTS0zIzRviI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257334306927-pppldblmlf320jrdjbk6rr69abanfg7h.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "257334306927-31u90ahei4j44h7e4moru087575m8l9a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

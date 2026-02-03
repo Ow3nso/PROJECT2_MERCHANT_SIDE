@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/chat_pkg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lukhu_main" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lukhu_pay" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lukhu_pay/intasend_flutter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sales_pkg" vcs="Git" />
+  </component>
+</project>

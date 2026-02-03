@@ -1,0 +1,23 @@
+PODS:
+  - auth_plugin (0.0.1):
+    - Flutter
+  - Flutter (3.13.0)
+
+DEPENDENCIES:
+  - auth_plugin (from `.symlinks/plugins/auth_plugin/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Flutter
+
+EXTERNAL SOURCES:
+  auth_plugin:
+    :path: ".symlinks/plugins/auth_plugin/ios"
+
+SPEC CHECKSUMS:
+  auth_plugin: c734ade034654cec926fd3cb3f9733277f951897
+  Flutter: 8ff16720b007bae16abfe75ef9fe3ee45ead486a
+
+PODFILE CHECKSUM: 8c21b7e5c5e5f406c5176acff5153d944de1ddef
+
+COCOAPODS: 1.15.2
